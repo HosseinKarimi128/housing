@@ -1,0 +1,2 @@
+- method of handeling numerical data: pandas interpolation 
+- method of interpolating the missing numerical data: leanier
