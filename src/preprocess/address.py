@@ -56,8 +56,8 @@ class AddressConverter(BaseEstimator, TransformerMixin):
                 print("requesting lat and long for ", fullNeighborhood, i, "/", len(x["fullNeighborhood"].unique()))
                 # response = requests.get(os.path.join(endpoint, fak, fullNeighborhood))
                 g = geocoder.osm(fullNeighborhood)
-                x["lat"].replace(g.json['lat'], inplace=True)
-                x["long"].replace(g.json['lng'], inplace=True)
+                x['lat'].replace(fullNeighborhood, g.json['lat'], inplace=True)
+                x['long'].replace(fullNeighborhood, g.json['lng'], inplace=True)
                 i += 1
                 clear_output(wait=False)
                 os.system('cls')

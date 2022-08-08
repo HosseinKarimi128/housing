@@ -87,7 +87,7 @@ def get_columns(_type):
             "PoolArea",
             "MiscVal",
             "MoSold",
-            "YrSold", "SalePrice"]
+            "YrSold"]
     if _type == 'str':
         return string_columns
     elif _type == 'nmc':

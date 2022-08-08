@@ -25,7 +25,7 @@ class TransformerPipeLine(BaseEstimator, TransformerMixin):
         housing_transform_pipeline = Pipeline([
             ('AddressConverter', AddressConverter("Neighborhood")),
             ('Cleaner', Cleaner(str_cols, cat_cols, num_cols, nmc_cols)),
-            # ('FeatureScaler', FeatureScaler(num_cols)),
+            ('FeatureScaler', FeatureScaler(num_cols)),
             ('CatDataHandler', CatDataHandler(str_cols, nmc_cols)),
             ('CreateSet', CreateSet())])
         return housing_transform_pipeline.fit_transform(x)
